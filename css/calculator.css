@@ -1,0 +1,35 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: 23.125rem;
+}
+
+.hi-panel {
+  display: flex;
+}
+
+.board {
+  border: 0.3125rem solid brown;
+  width: 17.875rem;
+  font-size: 2.375rem;
+}
+
+.key {
+  width: 4rem;
+  height: 4rem;
+  background-color: chocolate;
+  margin: 0.3125rem;
+  font-size: 2.5rem;
+  border: 0.3125rem solid brown;
+  border-radius: 15%;
+}
+
+.key:hover {
+  cursor: pointer;
+  border: 0.3125rem solid yellow;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+}
