@@ -1,0 +1,71 @@
+.labyrint {
+    display: flex;
+  }
+  
+  .service {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  td {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .wall {
+    border: 0.125rem solid #000;
+  }
+  
+  .hider {
+    display: none;
+  }
+  
+  .service {
+    display: flex;
+  }
+  .player {
+    width: 0rem;
+    height: 0rem;
+    border-right: 0.75rem solid transparent;
+    border-top: 0.75rem solid #000;
+    border-left: 0.75rem solid #000;
+    border-bottom: 0.75rem solid #000;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+  
+  .labyrint-width,
+  .labyrint-height {
+    font-size: 1.25rem;
+  }
+  
+  .labyrint-generator {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 10%;
+    background-color: burlywood;
+    margin: 0.5rem;
+  }
+  
+  .play-game {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 10%;
+    background-color: burlywood;
+    margin: 0.5rem;
+  }
+  
+  .labyrint-generator:hover,
+  .play-game:hover {
+    border: 0.3125rem solid #000;
+    cursor: pointer;
+  }
+  
+  .winner {
+    font-size: 3rem;
+    margin: 5% auto;
+  }  
