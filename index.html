@@ -19,7 +19,6 @@
       <button class="element-forward">&gt;</button>
     </div>
     <div class="slider-marker" id="slider-marker"></div>
-    <script src="scripts/slider.js"></script>
     <hr>
     <h2>Калькулятор</h2>
     <div class="calculator">
@@ -50,5 +49,27 @@
         <button class="key">=</button>
       </div>
     </div>
+    <hr>
+    <h2>Помидор</h2>
+    <div class="pomodoro">
+      <span class="timer" id="timer"></span>
+      <div class="control">
+        <button class="start">Старт</button>
+        <button class="stop">Стоп</button>
+        <button class="setup">⚙</button>
+      </div>
+      <span class="setup-menu hider">
+        <label><h3>Время работы:</h3><input type="time" step="1" class="work-time"></label>
+        <label><h3>Время перерыва:</h3><input type="time" step="1" class="repose-time"></label>
+        <label><h3>Число повторений:</h3><input type="number" step="1" class="count-repeat"></label>
+        <div>
+          <button class="confirm">Принять</button>
+          <button class="reject">Сбросить</button>
+        </div>
+      </span>
+    </div>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/pomodoro.js"></script>
   </body>
 </html>
