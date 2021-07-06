@@ -175,7 +175,6 @@ document
     labHeight = document
       .querySelector(".labyrint-height")
       .querySelector("input").value;
-    console.log(labWidth, labHeight, " ", coordX, coordY);
     initialization();
     mapMatrix();
     generator();
