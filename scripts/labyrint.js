@@ -1,5 +1,5 @@
 let labyrint = document.querySelector("table");
-let service = document.querySelector(".service")
+let service = document.querySelector(".service");
 let map = [];
 let stack = [];
 let labWidth = 15;
@@ -37,7 +37,6 @@ function mapMatrix() {
     map[i].length = labHeight;
     map[i].fill(false);
   }
-  console.log('Создание матрицы');
 }
 
 function generator() {
@@ -48,7 +47,6 @@ function generator() {
     map[coordX][coordY] = true;
     labyrintOutput(false);
   } while (stack.length > 1);
-  console.log('Генерация');
 }
 
 function newStep(tempX, tempY) {
@@ -122,37 +120,38 @@ function newStep(tempX, tempY) {
   }
 }
 
-window.addEventListener("keydown", function (event) {
-  event.preventDefault();
-  clearCharacter();
-  switch (event.key) {
-    case "ArrowUp":
-    case "w":
-    case "ц":
-      coordY = map[coordY - 1][coordX] ? coordY - 1 : coordY;
-      break;
-    case "ArrowDown":
-    case "s":
-    case "ы":
-      coordY = map[coordY + 1][coordX] ? coordY + 1 : coordY;
-      break;
-    case "ArrowLeft":
-    case "a":
-    case "ф":
-      coordX = map[coordY][coordX - 1] ? coordX - 1 : coordX;
-      break;
-    case "ArrowRight":
-    case "d":
-    case "в":
-      coordX = map[coordY][coordX + 1] ? coordX + 1 : coordX;
-      break;
-  }
-  printCharacter();
-  console.log(labWidth,labHeight,' ',coordX,coordY);
-  if ((coordX == (labHeight - 2)&&coordY == (labWidth - 2))) {
-    winner();
-  }
-});
+document
+  .querySelector(".labyrint")
+  .addEventListener("keydown", function (event) {
+    event.preventDefault();
+    clearCharacter();
+    switch (event.key) {
+      case "ArrowUp":
+      case "w":
+      case "ц":
+        coordY = map[coordY - 1][coordX] ? coordY - 1 : coordY;
+        break;
+      case "ArrowDown":
+      case "s":
+      case "ы":
+        coordY = map[coordY + 1][coordX] ? coordY + 1 : coordY;
+        break;
+      case "ArrowLeft":
+      case "a":
+      case "ф":
+        coordX = map[coordY][coordX - 1] ? coordX - 1 : coordX;
+        break;
+      case "ArrowRight":
+      case "d":
+      case "в":
+        coordX = map[coordY][coordX + 1] ? coordX + 1 : coordX;
+        break;
+    }
+    printCharacter();
+    if (coordX == labHeight - 2 && coordY == labWidth - 2) {
+      winner();
+    }
+  });
 
 function printCharacter() {
   row = labyrint.querySelectorAll("tr");
@@ -166,22 +165,27 @@ function clearCharacter() {
   collumn[coordX].classList.remove("player");
 }
 
-document.querySelector(".labyrint-generator").addEventListener("click", function () {
-  labyrint.innerHTML = "";
-  labWidth = document.querySelector(".labyrint-width").querySelector("input").value;
-  labHeight = document.querySelector(".labyrint-height").querySelector("input").value;
-  console.log(labWidth,labHeight,' ',coordX,coordY);
-  initialization();
-  mapMatrix();
-  generator();
-});
+document
+  .querySelector(".labyrint-generator")
+  .addEventListener("click", function () {
+    labyrint.innerHTML = "";
+    labWidth = document
+      .querySelector(".labyrint-width")
+      .querySelector("input").value;
+    labHeight = document
+      .querySelector(".labyrint-height")
+      .querySelector("input").value;
+    console.log(labWidth, labHeight, " ", coordX, coordY);
+    initialization();
+    mapMatrix();
+    generator();
+  });
 
 document.querySelector(".play-game").addEventListener("click", function () {
-  service.querySelector('span').classList.add('hider');
+  service.querySelector("span").classList.add("hider");
   clearCharacter();
   coordX = 1;
   coordY = 1;
-  console.log(labWidth,labHeight,' ',coordX,coordY);
   printCharacter();
 });
 
@@ -193,13 +197,12 @@ function initialization() {
       tr.appendChild(td);
     }
     labyrint.appendChild(tr);
-    console.log('Инициализация');
   }
   coordX = 1;
   coordY = 1;
-  service.querySelector('span').classList.add('hider');
+  service.querySelector("span").classList.add("hider");
 }
 
 function winner() {
-  service.querySelector('span').classList.remove('hider');
+  service.querySelector("span").classList.remove("hider");
 }

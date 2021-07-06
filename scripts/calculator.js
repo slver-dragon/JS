@@ -26,7 +26,7 @@ document
 
 document.querySelector(".board").addEventListener("keydown", function (event) {
   event.preventDefault();
-  handler(event.keyCode);
+  handler(event.key);
 });
 
 function handler(symbol) {
