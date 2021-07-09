@@ -23,7 +23,7 @@
     <h2>Калькулятор</h2>
     <div class="calculator">
       <div class="hi-panel">
-        <input class="board" id="board"></input>
+        <input class="board" id="board"> </input>
         <button class="key">←</button>
       </div>
       <div class="keyboard">
@@ -58,21 +58,21 @@
         <button class="stop">Стоп</button>
         <button class="setup">⚙</button>
       </div>
-      <span class="setup-menu hider">
-        <label><h3>Время работы:</h3><input type="time" step="1" class="work-time"></label>
-        <label><h3>Время перерыва:</h3><input type="time" step="1" class="repose-time"></label>
-        <label><h3>Число повторений:</h3><input type="number" step="1" class="count-repeat"></label>
+      <div class="setup-menu hider">
+        <div><h3>Время работы:</h3><input type="time" step="1" class="work-time"></div>
+        <div><h3>Время перерыва:</h3><input type="time" step="1" class="repose-time"></div>
+        <div><h3>Число повторений:</h3><input type="number" step="1" class="count-repeat"></div>
         <div>
           <button class="confirm">Принять</button>
           <button class="reject">Сбросить</button>
         </div>
-      </span>
+      </div>
     </div>
     <hr>
     <h2>Лабиринт</h2>
     <div class="labyrint">
       <table></table>
-      <div class="service">
+      <div class="labyrint-service">
         <label class="labyrint-height"><input type="range" min="11" max="31" step="2" value="21">Ширина</label>
         <label class="labyrint-width"><input type="range" min="11" max="31" step="2" value="21">Высота</label>
         <button class="labyrint-generator" >Пересоздать лабиринт</button>
@@ -82,15 +82,21 @@
     </div>
     <hr>
     <div class="weather">
-        <label><h3>Ваш город:</h3><input type="text" class="city"></label>
-        <label><h3>Ваша страна:</h3><select name="select-state" class="select-state"></select></label>
-      <div></div>
+      <div class="weather-service">  
+        <div><h3>Ваш город:</h3><input type="text" class="city"></div>
+        <div><h3>Ваша страна:</h3><select name="select-state" class="select-state"></select></div><br>
+        <button class="show-weather" >Показать погоду</button>
+      </div>
+      <div class="weather-informer">
+        <span class="no-city hider">Такого города не существует!</span>
+      </div>
     </div>
-    
+    <hr>
     <script src="/src/js/slider.js"></script>
     <script src="/src/js/calculator.js"></script>
     <script src="/src/js/pomodoro.js"></script>
     <script src="/src/js/labyrint.js"></script>
+    <script src="/src/js/city.list.js"></script>
     <script src="/src/js/weather.js"></script>
   </body>
-</html>
+</html> 

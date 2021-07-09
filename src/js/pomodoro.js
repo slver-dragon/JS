@@ -134,6 +134,6 @@ document.querySelector(".reject").addEventListener("click", function () {
 
 function changeSound() {
   audio = new Audio();
-  audio.src = 'sound/bell.mp3';
+  audio.src = '/src/assets/sounds/bell.mp3';
   audio.autoplay = true;
 }

@@ -1,0 +1,59 @@
+.weather {
+  display: flex;
+}
+
+.weather-service,
+.weather-informer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.city,
+.select-state {
+  width: 10.9375rem;
+  height: 2.1875rem;
+  font-size: 2rem;
+  padding: 0px 0.3125rem;
+  border-radius: 10%;
+  border: 0.125rem solid #000;
+}
+
+.show-weather {
+  width: 11.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 10%;
+  background-color: burlywood;
+  margin: 0.5rem;
+}
+
+.show-weather:hover {
+  border: 0.3125rem solid #000;
+  cursor: pointer;
+}
+
+.hider {
+  display: none;
+}
+
+.weather-icon {
+  width: 7rem;
+  height: 7rem;
+  margin: auto;
+}
+
+.description,
+.temperature,
+.humidity,
+.pressure {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.125rem;
+}
+
+.no-city {
+  width: 12rem;
+  white-space: pre-wrap;
+  text-align: center;
+}

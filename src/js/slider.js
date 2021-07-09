@@ -104,15 +104,15 @@ function initialization() {
   for (let i = slideCount + 1; i > -1; i--) {
     switch (i) {
       case 0:
-        element = `<img class="slider-picture" src="/src/assets/img-${slideCount}.png" alt=""/>`;
+        element = `<img class="slider-picture" src="/src/assets/images/img-${slideCount}.png" alt=""/>`;
         marker = "";
         break;
       case slideCount + 1:
-        element = `<img class="slider-picture" src="/src/assets/img-1.png" alt=""/>`;
+        element = `<img class="slider-picture" src="/src/assets/images/img-1.png" alt=""/>`;
         marker = "";
         break;
       default:
-        element = `<img class="slider-picture" src="/src/assets/img-${i}.png" alt=""/>`;
+        element = `<img class="slider-picture" src="/src/assets/images/img-${i}.png" alt=""/>`;
         marker = `<span class="marker-element" id="marker-${i}"></span>`;
     }
     sliderElement.insertAdjacentHTML("afterbegin", element);

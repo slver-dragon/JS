@@ -55,11 +55,3 @@
   box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
   cursor: pointer;
 }
-
-hr {
-  border: 0.125rem solid #fed100;
-  color: #fed100;
-  size: 0.125rem;
-  width: 80%;
-  margin: 0.625rem;
-}

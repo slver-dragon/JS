@@ -1,5 +1,5 @@
 let labyrint = document.querySelector("table");
-let service = document.querySelector(".service");
+let service = document.querySelector(".labyrint-service");
 let map = [];
 let stack = [];
 let labWidth = 15;
