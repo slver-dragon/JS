@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Учебный проект по JS Эдуарда Пузыно</title>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <h2>Слайдер.</h2>
+    <h3>Слайдер разноразмерных картинок.</h3>
+    <h3>Вы можете перебирать картинки путем нажатия на стрелочки, либо выбирая токены под слайдером.</h3>
+    <h3>Мобильная версия лишена токенов, но позволяет листать картинки касанием.</h3>
+    <div class="slider">
+      <button class="element-back">&lt;</button>
+      <div class="slider-window" id="slider-window">
+        <div class="slider-element" id="slider-element"></div>
+      </div>
+      <button class="element-forward">&gt;</button>
+    </div>
+    <div class="slider-marker" id="slider-marker"></div>
+    <hr>
+    <h2>Калькулятор.</h2>
+    <h3>Просто калькулятор.</h3>
+    <h3>Работает как от физической, так и экранной клавиатуры.</h3>
+    <div class="calculator">
+      <div class="hi-panel">
+        <input class="board" id="board"> </input>
+        <button class="key">←</button>
+      </div>
+      <div class="keyboard">
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">+</button>
+        <button class="key">-</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">*</button>
+        <button class="key">/</button>
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key">√</button>
+        <button class="key">X²</button>
+        <button class="key">C</button>
+        <button class="key">0</button>
+        <button class="key">.</button>
+        <button class="key">/-/</button>
+        <button class="key">=</button>
+      </div>
+    </div>
+    <hr>
+    <h2>Помидор.</h2>
+    <h3>Помощник-органайзер.</h3>
+    <h3>Кнопка с шестеренкой, позволяет задать длительность интервалов работы-отдыха, а также их число.</h3>
+    <h3>Кнопки "Старт" и "Стоп" - запускает и завершает работу соответственно.</h3>
+    <div class="pomodoro">
+      <span class="timer" id="timer"></span>
+      <div class="control">
+        <button class="start">Старт</button>
+        <button class="stop">Стоп</button>
+        <button class="setup">⚙</button>
+      </div>
+      <div class="setup-menu hider">
+        <div><h3>Время работы:</h3><input type="time" step="1" class="work-time"></div>
+        <div><h3>Время перерыва:</h3><input type="time" step="1" class="repose-time"></div>
+        <div><h3>Число повторений:</h3><input type="number" step="1" class="count-repeat"></div>
+        <div>
+          <button class="confirm">Принять</button>
+          <button class="reject">Сбросить</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h2>Лабиринт.</h2>
+    <h3>Игра в которой требуется добраться из верхнего левого в правый нижний угол лабиринта.</h3>
+    <h3>Управление клавишами "WASD" в любой раскладке, либо клавиши курсора.</h3>
+    <h3>Ползунками можно регулировать ширину и высоту генерируемого лабиринта.</h3>
+    <div class="labyrint">
+      <table></table>
+      <div class="labyrint-service">
+        <label class="labyrint-height"><input type="range" min="11" max="31" step="2" value="21">Ширина</label>
+        <label class="labyrint-width"><input type="range" min="11" max="31" step="2" value="21">Высота</label>
+        <button class="labyrint-generator" >Пересоздать лабиринт</button>
+        <button class="play-game" >Начать игру</button>
+        <span class="winner">WIN!!!</span>
+      </div>
+    </div>
+    <hr>
+    <h2>Погодный информатор.</h2>
+    <h3>Информатор погоды в нужном городе.</h3>
+    <h3>В поле "Ваш город" вводите название требуемого города на английском языке.</h3>
+    <h3>Если требуемый город существует в нескольких странах, Вам будет предложено выбрать страну.</h3>
+    <h3>Для получения результата жмите кнопку "Показать погоду".</h3>
+    <div class="weather">
+      <div class="weather-service">  
+        <div><h3>Ваш город:</h3><input type="text" class="city"></div>
+        <div><h3>Ваша страна:</h3><select name="select-state" class="select-state"></select></div><br>
+        <button class="show-weather" >Показать погоду</button>
+      </div>
+      <div class="weather-informer">
+        <span class="no-city hider">Такого города не существует!</span>
+      </div>
+    </div>
+    <hr>
+    <script src="/src/js/slider.js"></script>
+    <script src="/src/js/calculator.js"></script>
+    <script src="/src/js/pomodoro.js"></script>
+    <script src="/src/js/labyrint.js"></script>
+    <script src="/src/js/city.list.js"></script>
+    <script src="/src/js/weather.js"></script>
+  </body>
+</html> 

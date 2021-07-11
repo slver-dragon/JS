@@ -1,0 +1,84 @@
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+}
+
+.start,
+.stop {
+  width: 9.375rem;
+  height: 3.125rem;
+  font-size: 1.5rem;
+  border-radius: 10%;
+  background-color: chocolate;
+}
+
+.setup {
+  width: 3.125rem;
+  height: 3.125rem;
+  font-size: 1.5rem;
+  border-radius: 20%;
+  background-color: chocolate;
+}
+
+.start:hover,
+.stop:hover,
+.setup:hover,
+.confirm:hover,
+.reject:hover {
+  border: 0.3125rem solid #000;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 6.25rem;
+  font-weight: 400;
+  margin-right: 0%;
+  color: #00f;
+}
+
+.repose {
+  color: #0f0;
+  font-size: 6.25rem;
+  font-weight: 400;
+}
+
+.timer-end {
+  font-size: 3.75rem;
+  font-weight: 400;
+  margin-right: 0%;
+  color: #ff352b;
+}
+
+.setup-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-time,
+.repose-time,
+.count-repeat {
+  width: 10.9375rem;
+  height: 2.1875rem;
+  font-size: 2rem;
+  padding: 0px 0.3125rem;
+  border-radius: 10%;
+  border: 0.125rem solid #000;
+}
+
+.hider {
+  display: none;
+}
+
+.confirm,
+.reject {
+  width: 7.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 10%;
+  background-color: chocolate;
+  margin-top: 0.3125rem;
+}
+
+.error {
+  border: 0.3125rem solid #f00;
+}
