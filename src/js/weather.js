@@ -45,7 +45,6 @@ function cityCheck() {
     weatherInformer.querySelector(".no-city").classList.remove("hider");
     inputCity.value = "";
   }
-  /*inputCity.value = */
 }
 
 inputCity.addEventListener("keydown", function (event) {
@@ -66,8 +65,6 @@ document.querySelector(".show-weather").onclick = async function () {
   response = await fetch(link);
 
   if (response.ok) {
-    // если HTTP-статус в диапазоне 200-299
-    // получаем тело ответа (см. про этот метод ниже)
     jsonFile = await response.json();
   } else {
     alert("Ошибка HTTP: " + response.status);
