@@ -1,0 +1,36 @@
+@import url(./slyder.css);
+@import url(./calculator.css);
+@import url(./pomodoro.css);
+@import url(./labyrint.css);
+@import url(./weather.css);
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 3.25rem;
+  margin: 0.3125rem auto;
+}
+
+h3 {
+  font-size: 2.25rem;
+  white-space: nowrap;
+  color: #333;
+}
+
+hr {
+  border: 0.125rem solid #fed100;
+  color: #fed100;
+  size: 0.125rem;
+  width: 80%;
+  margin: 0.625rem;
+}
+
+@media (max-width: 62rem) {
+  .slider-marker {
+    display: none;
+  }
+}
